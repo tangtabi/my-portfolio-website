@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nfortabi Tang Simeon – AI and Machine Learning</title>
+<meta name="description" content="Portfolio of Nfortabi Tang Simeon, AI and machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F6; --surface:#FFFFFF; --ink:#16203A; --muted:#566079;
+  --accent:#2F3FE6; --accent2:#F0560F; --line:#D5DAE6;
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Newsreader',Georgia,'Times New Roman',serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1426; --surface:#171E36; --ink:#E8ECF8; --muted:#9AA4C2;
+    --accent:#7C89FF; --accent2:#FF8A4C; --line:#2A3354;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.15rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-family:var(--display);font-weight:500;font-size:1rem}
+nav .links{display:flex;gap:22px}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700}
+.hero p{max-width:34ch;color:var(--muted);margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:500;font-size:1rem;padding:12px 20px;border-radius:6px;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.plot{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.plot canvas{width:100%;height:auto;display:block;aspect-ratio:1/1;cursor:crosshair}
+.plot small{display:block;color:var(--muted);font-size:.9rem;line-height:1.4;margin-top:8px}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:32px}
+
+/* projects */
+.project{display:grid;grid-template-columns:200px 1fr;gap:12px 36px;padding:28px 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+.project .result{font-family:var(--display);font-weight:700;font-size:2.2rem;line-height:1;color:var(--accent)}
+.project .result span{display:block;font-weight:500;font-size:.95rem;color:var(--muted);margin-top:8px;line-height:1.3}
+.project h3{font-size:1.45rem;margin-bottom:8px}
+.project p{margin:0 0 10px;max-width:62ch}
+.stack{color:var(--muted);font-size:1rem}
+
+/* skills + experience */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.cols h3{font-size:1.1rem;margin-bottom:10px}
+.cols ul{margin:0;padding:0;list-style:none;color:var(--muted)}
+.cols li{padding:3px 0}
+.job{display:grid;grid-template-columns:200px 1fr;gap:4px 36px;padding:14px 0}
+.job b{font-family:var(--display);font-weight:500}
+.job span{color:var(--muted)}
+
+/* contact */
+form{display:grid;gap:14px;max-width:560px}
+label{font-family:var(--display);font-weight:500;font-size:1rem;display:grid;gap:6px}
+input,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+button.btn{cursor:pointer;justify-self:start;background:var(--ink);color:var(--bg)}
+footer{padding:40px 0;color:var(--muted);font-size:1rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:24px}
+  .project,.job{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  nav .links{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <span>Nfortabi Tang Simeon</span>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>I build AI and machine learning systems that solve real problems.</h1>
+      <p>I'm Nfortabi Tang Simeon, working in AI and machine learning. I'm building projects that put models to work on real problems.</p>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/nfortabi-tang-simeon" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="plot">
+      <canvas id="plot" width="520" height="520" aria-label="Interactive scatter plot: a decision boundary follows your cursor and recolors the points" role="img"></canvas>
+      <small>A classifier's decision boundary. Move your cursor over the plot to rotate it and watch the points change class.</small>
+    </div>
+  </header>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <article class="project">
+      <div class="result">In progress<span>First results coming soon</span></div>
+      <div>
+        <h3>Project one</h3>
+        <p>Add a one or two sentence description of the problem, your approach and what the model does.</p>
+        <p class="stack">Tools used go here.</p>
+      </div>
+    </article>
+    <article class="project">
+      <div class="result">In progress<span>First results coming soon</span></div>
+      <div>
+        <h3>Project two</h3>
+        <p>Add a one or two sentence description of the problem, your approach and what the model does.</p>
+        <p class="stack">Tools used go here.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="cols">
+      <div><h3>Modeling</h3><ul><li>Deep learning</li><li>NLP and LLMs</li><li>Computer vision</li><li>Time series</li></ul></div>
+      <div><h3>Tools</h3><ul><li>Python, SQL</li><li>PyTorch, scikit-learn</li><li>Hugging Face</li><li>Pandas, NumPy</li></ul></div>
+      <div><h3>Deployment</h3><ul><li>Docker, Kubernetes</li><li>AWS or GCP</li><li>MLflow, Weights &amp; Biases</li><li>CI/CD for models</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p style="margin:-16px 0 28px;color:var(--muted)">Email <a href="mailto:tangtabi7@gmail.com">tangtabi7@gmail.com</a>, call <a href="tel:+237655971785">+237 655 971 785</a>, or send a message below.</p>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+      <label>Your name <input type="text" name="name" required></label>
+      <label>Your email <input type="email" name="email" required></label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://www.linkedin.com/in/nfortabi-tang-simeon" target="_blank" rel="noopener">LinkedIn</a> &nbsp;
+    <a href="mailto:tangtabi7@gmail.com">tangtabi7@gmail.com</a> &nbsp;
+    <a href="tel:+237655971785">+237 655 971 785</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('plot'),x=c.getContext('2d'),W=c.width,H=c.height;
+  var pts=[],seed=7;
+  function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  function gauss(){return (rnd()+rnd()+rnd()+rnd()-2)*1.2}
+  for(var i=0;i<130;i++){
+    var k=i%2;
+    pts.push({x:.5+(k?.14:-.14)+gauss()*.12,y:.5+(k?-.1:.1)+gauss()*.12,k:k});
+  }
+  var angle=-0.9,target=angle;
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  function draw(){
+    var a=css('--accent'),b=css('--accent2'),line=css('--line'),ink=css('--ink');
+    x.clearRect(0,0,W,H);
+    var nx=Math.cos(angle),ny=Math.sin(angle);
+    x.fillStyle=a;x.globalAlpha=.07;
+    x.save();x.translate(W/2,H/2);x.rotate(angle+Math.PI/2);x.fillRect(-W,-H,2*W,H);x.restore();
+    x.fillStyle=b;x.save();x.translate(W/2,H/2);x.rotate(angle+Math.PI/2);x.fillRect(-W,0,2*W,H);x.restore();
+    x.globalAlpha=1;
+    x.strokeStyle=ink;x.lineWidth=2;x.setLineDash([8,6]);
+    x.beginPath();x.moveTo(W/2-Math.cos(angle+Math.PI/2)*W,H/2-Math.sin(angle+Math.PI/2)*W);
+    x.lineTo(W/2+Math.cos(angle+Math.PI/2)*W,H/2+Math.sin(angle+Math.PI/2)*W);x.stroke();x.setLineDash([]);
+    pts.forEach(function(p){
+      var side=((p.x-.5)*nx+(p.y-.5)*ny)>0?0:1;
+      x.beginPath();x.arc(p.x*W,p.y*H,7,0,6.283);
+      x.fillStyle=side?b:a;x.fill();
+      if(side!==p.k){x.lineWidth=2.5;x.strokeStyle=ink;x.stroke()}
+    });
+  }
+  function frame(){angle+=(target-angle)*.12;draw();if(Math.abs(target-angle)>.001)requestAnimationFrame(frame)}
+  function move(e){
+    var r=c.getBoundingClientRect(),t=e.touches?e.touches[0]:e;
+    target=Math.atan2(t.clientY-(r.top+r.height/2),t.clientX-(r.left+r.width/2));
+    requestAnimationFrame(frame);
+  }
+  c.addEventListener('mousemove',move);c.addEventListener('touchmove',move,{passive:true});
+  draw();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
+})();
+</script>
+</body>
+</html>
